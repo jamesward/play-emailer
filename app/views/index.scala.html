@@ -1,0 +1,33 @@
+@()
+
+@main("Play Framework Emailer") {
+
+    <div class="well">
+        <form action="@routes.Application.sendEmail()" method="post" class="form-horizontal">
+          <div class="control-group">
+            <label class="control-label" for="email">Email</label>
+            <div class="controls">
+              <input type="text" id="email" name="email" placeholder="foo@@bar.com">
+            </div>
+          </div>
+            <div class="control-group">
+                <label class="control-label" for="subject">Subject</label>
+                <div class="controls">
+                    <input type="text" id="subject" name="subject" placeholder="Hello, World">
+                </div>
+            </div>
+          <div class="control-group">
+            <label class="control-label" for="message">Message</label>
+            <div class="controls">
+              <textarea id="message" name="message"></textarea>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+              <button type="submit" class="btn">Send Email</button>
+            </div>
+          </div>
+        </form>
+    </div>
+
+}
